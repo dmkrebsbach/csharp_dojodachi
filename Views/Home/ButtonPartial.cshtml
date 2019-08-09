@@ -1,0 +1,27 @@
+@model Buddy
+
+<div class="buttons">
+    <div class="buttonRow">
+        @{
+            if(ViewBag.dead != null || ViewBag.win != null) {
+                <form action="/Restart" method="post">
+                    <input type="submit" value="Restart Game">
+                </form>
+            }
+            else {
+                <form action="/Feed" method="post">
+                    <input type="submit" value="Feed">
+                </form>
+                <form action="/Play" method="post">
+                    <input type="submit" value="Play">
+                </form>
+                <form action="/Work" method="post">
+                    <input type="submit" value="Work">
+                </form>
+                <form action="/Sleep" method="post">
+                    <input type="submit" value="Sleep">
+                </form>
+            }
+        }
+    </div>
+</div>

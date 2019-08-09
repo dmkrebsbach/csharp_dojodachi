@@ -1,0 +1,14 @@
+@model Buddy
+
+<div class="display">
+    @{
+        if(ViewBag.dead != null){
+            <img src="~/images/sad.gif" alt="Loser">
+        }else if(ViewBag.bad == true){
+            <img src="~/images/bad.jpeg" alt="Not great...">
+        }else{
+            <img src="~/images/happy.jpeg" alt="Happy">
+        }
+    }
+    <h4> @ViewBag.message</h4>
+</div>
